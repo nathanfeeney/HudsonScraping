@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "HudsonScraping", "HudsonScraping\HudsonScraping.pyproj", "{586B6A6F-629E-46AA-9744-0763E33099E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{586B6A6F-629E-46AA-9744-0763E33099E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{586B6A6F-629E-46AA-9744-0763E33099E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4A6DE96-0D9E-41AB-A5E3-95DFB29A3D3E}
+	EndGlobalSection
+EndGlobal
