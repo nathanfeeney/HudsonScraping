@@ -10,21 +10,18 @@ response = requests.get(url, timeout=5)
 content = BeautifulSoup(response.content, "html.parser")
 productNameArr = []
 productInfoArr = []
+
+
 for tweet in content.findAll('div', attrs={"class": "product-tile"}):
     productObject = {
         "product": tweet.find('p', attrs={"class": "product-name"}).text,
-         "meta data": tweet.findAll('p')[1].text,
-         "": tweet.findAll('p')[2].text
-    }
+         "meta data": {
+          "Quantity": tweet.findAll('p')[1].text.strip("Quantity: "),
+          "Price": tweet.findAll('p')[2].text.strip("Price: $"),
+          "img-url": tweet.find("img").get('src')
+    }}
     productNameArr.append(productObject)
-#for tweet in content.findAll('div', attrs={"class": "details"}):
-   # infoObject = {   
-       
-        #"metadataTest": tweet.findAll(text='Quantity:', items=2)
-    #}
-    
-   # productInfoArr.append(infoObject)
-with open('productNEW.json', 'w') as outfile:
-    json.dump(productNameArr, outfile)
-  #  json.dump(productInfoArr, outfile)
+
+with open('katrina.json', 'w') as outfile:
+    json.dump(productNameArr, outfile, indent=1)
     print("file created")
